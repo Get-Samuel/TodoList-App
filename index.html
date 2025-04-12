@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Samuel Fallah P1 | To-Do List</title>
+
+                <!-- Stylesheet links -->
+    <link rel="stylesheet" href="../Project-1-To-Do/Input.css">
+
+    <link rel="stylesheet" href="../Project-1-To-Do/media-queries.css">
+                 <!-- Stylesheet links -->
+
+                 <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+                <!-- GoogleFonts -->
+
+                <!-- IconifyLink -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <!-- IconifyLink -->
+
+</head>
+
+<body>
+
+    <section class="main">
+
+        <aside class="leftSide leftSideTemp">
+
+            <div class="createDiv">
+
+                <p id="refreshbtn" class="ToDo">Hello 👋 <br> Let's make Life Easier Here!</p>
+
+                <button id="Createthelistbtn" class="createBTN">
+                    <p>Create</p>
+                    <svg class="addbutton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"/></svg>
+                </button>
+                
+            </div>
+   
+            <div class="parentTodo">
+
+            </div>
+        </aside>
+
+        <aside class="rightSide">
+
+            <div id="todowindow" class="createTodoList" >
+
+                <svg class="xbutton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12z"/></svg>
+
+                <p class="createTodop">
+                    Create a To-Do List!
+                </p>
+
+                <div class="titleInputDiv">
+                    <label for="">Title</label>
+                    <input id="mytitle" type="text" class="titleInput"/>
+                </div>
+
+                <div class="datentime">
+                    <div class="dateInputDiv">
+                        <label for="">Date</label>
+                        <input id="mydate" type="date" class="titleInput"/>
+                    </div>
+                    <div class="timeInputDiv">
+                        <label for="">Time</label>
+                        <input id="mytime" type="time" class="titleInput"/>
+                    </div>
+                </div>
+
+                <div class="writethelist">
+
+                    <div class="todoSection">
+                        <p>NO: 1</p>
+                        <input class="input1" type="text"/>
+                    </div>
+                    
+                </div>
+                <div class="adddonedel">
+                    <button  class="addbuttonlist" >Add
+                        <svg class="addbutton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>
+                    </button>
+                    <button class="doneBTN">Done
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"/></svg>
+                    </button>
+                    <button 
+                        id="delbtn"
+                    >Delete
+                        <svg class="delbutton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+        <div class="menudisplay">
+        </div>
+
+        <div class="listedItem">
+        </div>
+        </aside>
+        
+        <a class="allright">All Rights Reserved @Samuel Fallah</a>
+    </section>
+
+    <script src="../Project-1-To-Do/Function.js"></script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Primary-color: #005653;
+    --transparent: #00b58e71;
+    --Accent-color: #00B58D ;
+    --Fading-color: #929292;
+    --Off-white: #d9d9d9;
+    --Black: #000000;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+section{
+    max-width: 100vw;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--Primary-color);
+}
+
+.main{
+    display: grid;
+    place-content: center;
+}
+
+
+.leftSide{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 1.5em;
+    min-width: 12rem;
+    padding: 2rem 1em;
+    justify-content: flex-start;
+    opacity: 0;
+    min-width: 280px;
+    animation: fadeIn 0.50s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        scale: 1.1;
+    }
+}
+
+.leftSideTemp{
+    width: fit-content;
+    place-self: center;
+}
+
+.leftSide .createDiv{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: none;
+}
+
+.ToDo {
+    background-color: transparent;
+    border: none;
+    font-size: 2.4em;
+    text-align: center;
+    line-height: 1.2em;
+    font-weight: 800;
+    color: var(--Off-white);
+}
+
+.createBTN{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 2em;
+    font-size: 1.3em;
+    gap: 0.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 1em;
+    color: var(--Primary-color);
+    background-color: var(--Accent-color);
+    animation: bounceIn 2s ease-in-out infinite;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  
+
+
+
+
+.createBTN:active{
+    scale: 0.9;
+}
+
+.rightSide{
+    display: none;
+    background-color: var(--Off-white);
+    width: 75%;
+    border-radius: 1rem;
+    padding: 4em;
+    min-height: 100%;
+}
+
+.title{
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--Accent-color);
+    margin-left: 1rem;
+}
+
+.menudisplay{
+    display: none;
+}
+
+.menudisplay h1{
+    display: flex;
+    font-size: 4.2em;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    width: fit-content;
+    height: fit-content;
+    padding: 0em 2em 0.2em 0em;
+    /* border-bottom: 1px solid var(--Accent-color); */
+    line-height: 1em;
+    color: var(--Primary-color);
+    transform: translateX(-50px);
+    animation: menuFade 0.7s forwards;
+}
+
+@keyframes menuFade {
+    10%{
+        transform: translateX(20px);
+    } 50%{
+        transform: translateX(40px);
+    } 100%  {
+        transform: translateX(0px);
+    }
+   
+}
+
+.parentTodo{
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    height: 100%;
+}
+
+.todo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.4em;
+    min-width: 240px;
+    animation: boxFadeIn 0.4s forwards;
+    opacity: 0;
+    scale: 0.7;
+}
+
+
+@keyframes boxFadeIn {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.listCol{
+    background-color: var(--transparent);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.1em;
+    padding: 0.4em 1em;
+    transition: all 0.1s;
+}
+
+.listCol:hover{
+    background-color: #026864;
+}
+
+.listCol p{
+    text-wrap: nowrap;
+    font-weight: 500;
+    color: var(--Off-white);
+    width: 6.5em;
+    padding-top: 5px;
+    overflow-x: scroll;
+    scrollbar-color: red;
+    cursor: grab;
+    user-select: none;
+}
+
+.listCol p::-webkit-scrollbar{
+    height: 5px;
+}
+
+
+.listCol > .actionBTN{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    min-width: 90px;
+    font-size: 1em;
+}
+
+.listCol > .actionBTN svg{
+    background-color: var(--Off-white);
+    padding: 0.2em;
+    color: var(--Primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.listCol > .actionBTN svg:active{
+    scale: 0.8;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1.5em;
+}
+.status p {
+    font-style: italic;
+    font-size: 0.6em;
+    color: var(--Accent-color);
+    letter-spacing: 0.125em;
+}
+
+.status svg{
+    width: 0.3em;
+    height: fit-content;
+    color: var(--Off-white);
+    transition: all 0.3s;
+}
+
+.allright{
+    color: var(--Accent-color);
+    font-size: 0.6em;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.listedItem {
+    display: none;
+    flex-direction: column;
+    margin-top: 2em;
+    padding-left: 8em;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+
+
+.bulleting{
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 1em 1em 2.5em;
+    border-radius: 1em;
+    transform: translateX(-50px);
+}
+
+@keyframes bulletFade {
+    10%{
+        transform: translateX(20px);
+    } 50%{
+        transform: translateX(40px);
+    } 100%  {
+        transform: translateX(0px);
+    }
+   
+}
+
+.bulleting input{
+    all: unset;
+    appearance: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    height: 2em;
+    width: 2em;
+    border: 1px solid var(--Primary-color);
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+    transition: all 1s;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--Primary-color);
+}
+input[type="checkbox"]:checked::after{
+    content: '✔';
+    color: white;
+    font-size: 1.2em;
+}
+
+
+.bulleting li{
+    gap: 1em;
+    width: fit-content;
+    list-style-type: disc;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+.createTodoList{
+    background-color: white;
+    width: 60%;
+    height: fit-content;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 1em;
+    display: none;
+}
+
+.createDisplay{
+    display: flex;
+}
+
+.createTodop{
+    grid-column: 1/2;
+    grid-row: span 1;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.xbutton{
+   margin-left: auto;
+   cursor: pointer;
+   transition: all 0.2s;
+   width: 2.5em;
+   color: var(--Primary-color);
+}
+
+.xbutton:active{
+    scale: 0.9;
+}
+
+.titleInputDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+label{
+    font-size: 0.7em;
+    background-color: var(--Accent-color);
+    width: fit-content;
+    padding: 0.5em 0.8em;
+    border-radius: 0.6em;
+    color: var(--Off-white);
+    letter-spacing: 0.1em;
+}
+
+input {
+    all: unset; 
+    border-bottom: 1px solid var(--Accent-color); 
+    padding: 5px; 
+  }
+  
+  input:focus {
+    border-bottom: 2px solid var(--Accent-color); 
+    caret-color: var(--Accent-color);
+  }
+
+input[type="date"] {
+  font-size: 0.8em; 
+  padding: 0.7em;
+}
+
+  
+
+.datentime{
+    display: flex;
+    gap: 0.6em;
+}
+
+.datentime div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+.writethelist{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.todoSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5%;
+    opacity: 0;
+    transform: translateY(-5em);
+    scale: 0.8;
+    animation: todoSFadeIn 0.3s forwards;
+}
+
+@keyframes todoSFadeIn {
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+.todoSection input{
+    width: 80%;
+    color: var(--Primary-color);
+}
+
+.todoSection p{
+    font-size: 1em;
+    min-width: fit-content;
+    color: black;
+}
+
+.createTodoList svg{
+    width: 2em;
+    color: var(--Primary-color);
+    cursor: pointer;
+}
+
+.createTodoList svg:active{
+    scale: 0.9;
+}
+
+.adddonedel{
+    margin: 0 auto;
+    width: fit-content;
+    min-width: fit-content;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+.adddonedel button{
+    padding: 0.4em 1em 0.4em 1.6em;
+    border-radius: 1em;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(251, 255, 0, 0.384);
+}
+
+.adddonedel button:nth-of-type(2){
+    background-color: rgba(15, 201, 77, 0.418);
+}
+
+.adddonedel button:nth-of-type(3){
+    background-color: #ff000063;
+    display: none;
+}
+
+.adddonedel button:active{
+    scale: 0.9;
+}
+
+.adddonedel button svg{
+    width: 1em;
+    color: black;
+}
+

@@ -1,0 +1,258 @@
+
+@media  (max-width: 1400px) {
+    .menudisplay{
+     font-size: 14px;
+    }
+
+    .bulleting{
+        font-size: 14px;
+    }
+
+    .leftSide{
+        padding-bottom: 0;
+    }
+ 
+ }
+
+ @media (min-width: 955px) and (max-width: 3000px){
+    .allright{
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        bottom: 1.9em;
+        left: 5%;
+    }
+ }
+ 
+ @media  (max-width: 1200px) {
+    .menudisplay{
+        font-size: 12px;
+       }
+   
+       .bulleting{
+           font-size: 12px;
+       }
+
+       .listedItem{
+        padding-left: 4em;
+       }
+
+       .menudisplay h1{
+        font-size: 3em;
+        }
+
+        .adddonedel{
+            font-size: 14px;
+        }
+  
+  }
+
+  @media  (max-width: 1050px) {
+    .menudisplay{
+        font-size: 10px;
+       }
+   
+       .bulleting{
+           font-size: 10px;
+       }
+
+       .bulleting div{
+        padding: 0.2em;
+        scale: 0.8;
+    }
+
+    .todoSection{
+        font-size: 14px;
+    }
+
+    .adddonedel{
+        font-size: 10px;
+    }
+
+    .adddonedel button{
+        font-size: 12px;
+    }
+
+ }
+
+
+@media  (max-width: 955px) {
+    section{
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .leftSide{
+        width: 60%;
+        height: fit-content;
+    }
+
+    .rightSide{
+        width: 80%;
+        height: fit-content;
+        font-size: 8px;
+    }
+
+    .menudisplay{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.7em;
+
+    }
+
+    .menudisplay h1{
+        font-size: 2.4em;
+        padding-right: 0;
+        text-align: center;
+        }
+
+    .title{
+        margin-left: 0;
+        font-style: normal;
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    .bulleting{
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .bulleting div{
+        padding: 0.2em;
+        scale: 0.7;
+    }
+
+    .createTodoList{
+        font-size: 1rem;
+        height: fit-content;
+        padding: 2em;
+        flex-direction: column;
+        gap: 1em;
+        border-radius: 1em;
+        min-width: 350px;
+    }
+
+
+}
+
+@media (max-width: 670px){
+    
+    .menudisplay h1{
+        font-size: 2.2em;
+        }
+
+       .bulleting li{
+        font-size: 2em;
+       }
+
+        .bulleting div{
+            scale: 0.6;
+        }
+
+        .createTodoList{
+            font-size: 14px;
+            height: fit-content;
+            padding: 2em;
+            flex-direction: column;
+            gap: 1em;
+            border-radius: 1em;
+            min-width: 300px;
+        }
+
+        .adddonedel{
+            font-size: 8px;
+        }
+
+
+}
+
+@media (max-width: 500px){
+    .leftSide{
+        font-size: 14px;
+    }
+
+    .bulleting{
+        align-items: center;
+        font-size: 5px;
+    }
+
+    .createTodoList{
+        font-size: 13px;
+        min-width: 100%;
+    }
+
+    .adddonedel{
+        font-size: 10px;
+    }
+
+    .adddonedel button{
+        font-size: 8px;
+        padding: 0.2em 0.8em 0.2em 1.4em;
+    }
+}
+
+@media (max-width: 450px){
+    
+    .menudisplay h1{
+        font-size: 1.8em;
+        }
+
+    .rightSide{
+        font-size: 7px;
+        min-width: 250px;
+    }
+
+    .leftSide{
+        font-size: 11px;
+        min-width: 200px;
+    }
+
+    .title{
+        font-style: italic;
+        font-size: 1.1em;
+        color: var(--Accent-color);
+        margin-left: 0.2rem;
+    }
+
+    .createTodoList{
+        font-size: 10px;
+        min-width: 200px;
+    }
+
+    .actionBTN svg{
+        background-color: red;
+        font-size: 2em;
+    }
+
+    .todoSection{
+        height: 2em;
+    }
+
+    .todoSection p{
+        font-size: 0.7em;
+    }
+
+    .todoSection input{
+        font-size: 0.7em;
+        padding: 0.2em 0.3em;
+    }
+
+    .adddonedel button{
+        padding: 0.1em 1em 0.1em 1.6em;
+        border-radius: 1em;
+    }
+
+    #todowindow{
+        margin: 0 auto;
+    }
+
+    .listCol p{
+        width: 52%;
+    }
+
+   
+}
