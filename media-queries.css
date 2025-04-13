@@ -11,10 +11,6 @@
     .leftSide{
         padding-bottom: 0;
     }
-
-    .listCol:hover{
-        background-color: #026864;
-    }
  
  }
 
@@ -26,6 +22,7 @@
         bottom: 1.9em;
         left: 7%;
     }
+
  }
  
  @media  (max-width: 1200px) {
@@ -158,6 +155,12 @@
 
 }
 
+@media (min-width: 670px) {
+    .listCol:hover{
+        background-color: #026864;
+    }
+}
+
 @media (max-width: 670px){
     body{
         min-height: 100svh;
@@ -283,7 +286,6 @@
 
     section{
         height: 100%;
-        min-width: 350px;
     }
     
     .menudisplay h1{
@@ -293,7 +295,6 @@
     .rightSide{
         font-size: 7px;
         width: 100%;
-        min-width: 200px;
         padding: 3em 2em;
         min-height: 30vh;
         margin-top: 1.2em;
@@ -442,3 +443,203 @@
 
    
 }
+
+
+@media (max-width: 400px){
+
+    body{
+        min-height: 100vh;
+    }
+
+    section{
+       min-height: 100svh;
+    }
+    
+    .menudisplay h1{
+        font-size: 2.8em;
+        }
+
+    .rightSide{
+        font-size: 7px;
+        width: 100%;
+        padding: 3em 2em;
+        min-height: 30vh;
+        margin-top: 1.2em;
+    }
+
+    #todowindow{
+        margin: 0 auto;
+        padding: 1.5em;
+        font-size: 17px;
+    }
+
+    .mytitle{
+        font-size: 1em;
+    }
+
+    .datentime{
+        font-size: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #mydate{
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+
+    #mytime{
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+
+    .dateInputDiv{
+       flex: 1;
+    }
+
+    .timeInputDiv{
+        flex: 1;
+    }
+
+    .writethelist{
+        font-size: 17px;
+    }
+
+    .bulleting{
+        padding: 1em;
+        font-size: 1em;
+    }
+
+    .leftSide{
+        font-size: 11px;
+        min-width: 90%;
+        padding: 0;
+    }
+
+
+    .createBTN{
+        border-radius: 1.5em;
+        font-size: 1em;
+    }
+
+    .createDiv{
+        font-size: 15px;
+        border: none;
+    }
+
+    .actionBTN{
+        font-size: 1em;
+    }
+
+    .ToDo{
+        font-weight: 700;
+        margin-bottom: 0.2em;
+        font-size: 1.5em;
+    }
+
+    label{
+        padding: 0.4em 0.8em;
+        border-radius: 0.4em;
+        font-size: 0.6em;
+        font-weight: 600;
+    }
+
+    .title{
+        font-style: italic;
+        font-size: 1.1em;
+        color: var(--Accent-color);
+        margin-left: 0.2rem;
+    }
+
+    .createTodoList{
+        font-size: 10px;
+        min-width: 100%;
+        padding: 2.5em;
+    }
+
+    .todoSection{
+        font-size: 1em;
+        height: 2em;
+    }
+
+    .todoSection p{
+        font-size: 1em;
+    }
+
+    .todoSection input{
+        font-size: 1em;
+        padding: 0.2em 0.3em;
+    }
+
+    input:focus{
+        border-bottom: 1px solid var(--Accent-color);
+    }
+
+
+    .adddonedel {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-self: center;
+        width: 90%;
+       /*  gap: 2em; */
+    }
+
+    .adddonedel button{
+        flex: 1;
+        padding: 0.5em 1em 0.5em 1.6em;
+        border-radius: 0.7em;
+        color: black;
+    }
+
+    .parentTodo{
+        margin: 0 auto;
+        min-width: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .todo{
+        font-size: 16px;
+        margin-top: 0.1em;
+        min-width: 0;
+        width: 100%;
+      
+    }
+
+    .listCol{
+        margin: 0 auto;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .listCol p{
+        width: 52%;
+    }
+
+    input[type ="checkbox"]{
+        all: unset;
+        padding: 1.5em;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 0.5em;
+        border: 1px solid black;
+    }
+
+    input[type ="checkbox"]:checked{
+        all: unset;
+        padding: 0.6em 1em;
+        background-color: black;
+        border-radius: 0.5em;
+        border: 1px solid var(--Primary-color);
+    }
+
+    .status{
+        font-size: 14px;
+    }
+
+   
+}
+
