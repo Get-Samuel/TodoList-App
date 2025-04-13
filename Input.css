@@ -204,9 +204,6 @@ section{
     transition: all 0.1s;
 }
 
-.listCol:hover{
-    background-color: #026864;
-}
 
 .listCol p{
     text-wrap: nowrap;

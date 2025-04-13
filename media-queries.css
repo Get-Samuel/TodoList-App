@@ -11,6 +11,10 @@
     .leftSide{
         padding-bottom: 0;
     }
+
+    .listCol:hover{
+        background-color: #026864;
+    }
  
  }
 
@@ -20,7 +24,7 @@
         width: fit-content;
         height: fit-content;
         bottom: 1.9em;
-        left: 5%;
+        left: 7%;
     }
  }
  
@@ -48,6 +52,14 @@
   }
 
   @media  (max-width: 1050px) {
+    body{
+        min-height: 100svh;
+    }
+
+    section{
+        min-height: 100svh;
+    }
+
     .menudisplay{
         font-size: 10px;
        }
@@ -77,11 +89,16 @@
 
 
 @media  (max-width: 955px) {
+    body{
+        min-height: 100svh;
+    }
+    
     section{
         padding: 2rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        min-height: 100svh;
     }
 
     .leftSide{
@@ -93,6 +110,8 @@
         width: 80%;
         height: fit-content;
         font-size: 8px;
+        margin-top: 1.2em;
+        min-height: 450px;
     }
 
     .menudisplay{
@@ -104,7 +123,7 @@
     }
 
     .menudisplay h1{
-        font-size: 2.4em;
+        font-size: 3.4em;
         padding-right: 0;
         text-align: center;
         }
@@ -140,9 +159,12 @@
 }
 
 @media (max-width: 670px){
+    body{
+        min-height: 100svh;
+    }
     
     .menudisplay h1{
-        font-size: 2.2em;
+        font-size: 3.2em;
         }
 
        .bulleting li{
@@ -171,9 +193,41 @@
 }
 
 @media (max-width: 500px){
+    body{
+        min-height: 100svh;
+    }
+
+    section{
+        min-height: 100svh;
+    }
+
     .leftSide{
         font-size: 14px;
+        min-width: 90%;
     }
+
+    .rightSide{
+        font-size: 7px;
+        min-width: 90%;
+        padding: 3em 2em;
+        min-height: 30vh;
+    }
+
+    label{
+        padding: 0.3em 0.7em;
+        border-radius: 0.4em;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    .ToDo{
+        font-weight: 700;
+        margin-bottom: 0.7em;
+    }
+
+    .createBTN{
+        border-radius: 1.5em;
+    } 
 
     .bulleting{
         align-items: center;
@@ -186,29 +240,128 @@
     }
 
     .adddonedel{
+        display: flex;
         font-size: 10px;
+        width: 100%;
+        justify-self: center;
+    }
+
+    input:focus{
+        border-bottom: 1px solid var(--Accent-color);
     }
 
     .adddonedel button{
-        font-size: 8px;
-        padding: 0.2em 0.8em 0.2em 1.4em;
+        padding: 0.3em 1em 0.3em 1.6em;
+        border-radius: 0.7em;
+        color: black;
+        flex-shrink: 1;
+    }
+
+    input[type ="checkbox"]{
+        all: unset;
+        padding: 1.5em;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 0.5em;
+        border: 1px solid black;
+    }
+
+    input[type ="checkbox"]:checked{
+        all: unset;
+        padding: 0.6em 1em;
+        background-color: black;
+        border-radius: 0.5em;
+        border: 1px solid var(--Primary-color);
     }
 }
 
 @media (max-width: 450px){
+
+    body{
+        min-height: 100svh;
+    }
+
+    section{
+        height: 100%;
+        min-width: 350px;
+    }
     
     .menudisplay h1{
-        font-size: 1.8em;
+        font-size: 2.8em;
         }
 
     .rightSide{
         font-size: 7px;
-        min-width: 250px;
+        width: 100%;
+        min-width: 200px;
+        padding: 3em 2em;
+        min-height: 30vh;
+        margin-top: 1.2em;
+    }
+
+    #todowindow{
+        margin: 0 auto;
+        padding: 1.5em;
+        font-size: 17px;
+    }
+
+    .mytitle{
+        font-size: 1em;
+    }
+
+    .datentime{
+        font-size: 17px;
+    }
+
+    #mydate{
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    #mytime{
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .writethelist{
+        font-size: 17px;
+    }
+
+    .bulleting{
+        padding: 1em;
+        font-size: 1em;
     }
 
     .leftSide{
         font-size: 11px;
-        min-width: 200px;
+        min-width: 90%;
+    }
+
+
+    .createBTN{
+        border-radius: 1.5em;
+    }
+
+    .createDiv{
+        font-size: 17px;
+        border: none;
+    }
+
+    .actionBTN{
+        font-size: 1em;
+    }
+
+    .ToDo{
+        font-weight: 700;
+        margin-bottom: 0.2em;
+        font-size: 3em;
+    }
+
+    label{
+        padding: 0.4em 0.8em;
+        border-radius: 0.4em;
+        font-size: 0.7em;
+        font-weight: 600;
     }
 
     .title{
@@ -220,38 +373,71 @@
 
     .createTodoList{
         font-size: 10px;
-        min-width: 200px;
-    }
-
-    .actionBTN svg{
-        background-color: red;
-        font-size: 2em;
+        min-width: 100%;
+        padding: 2.5em;
     }
 
     .todoSection{
+        font-size: 1em;
         height: 2em;
     }
 
     .todoSection p{
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
     .todoSection input{
-        font-size: 0.7em;
+        font-size: 1em;
         padding: 0.2em 0.3em;
     }
 
-    .adddonedel button{
-        padding: 0.1em 1em 0.1em 1.6em;
-        border-radius: 1em;
+    input:focus{
+        border-bottom: 1px solid var(--Accent-color);
     }
 
-    #todowindow{
-        margin: 0 auto;
+
+    .adddonedel {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-self: center;
+        width: 90%;
+       /*  gap: 2em; */
     }
+
+    .adddonedel button{
+        flex: 1;
+        padding: 0.5em 1em 0.5em 1.6em;
+        border-radius: 0.7em;
+        color: black;
+    }
+
+    .todo{
+        font-size: 18px;
+        margin-top: 0.4em;
+    }
+
 
     .listCol p{
         width: 52%;
+    }
+
+    input[type ="checkbox"]{
+        all: unset;
+        padding: 1.5em;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 0.5em;
+        border: 1px solid black;
+    }
+
+    input[type ="checkbox"]:checked{
+        all: unset;
+        padding: 0.6em 1em;
+        background-color: black;
+        border-radius: 0.5em;
+        border: 1px solid var(--Primary-color);
     }
 
    
