@@ -11,6 +11,10 @@
     .leftSide{
         padding-bottom: 0;
     }
+
+    .leftSideTemp{
+        width: 150%;
+    }
  
  }
 
@@ -49,13 +53,6 @@
   }
 
   @media  (max-width: 1050px) {
-    body{
-        min-height: 100svh;
-    }
-
-    section{
-        min-height: 100svh;
-    }
 
     .menudisplay{
         font-size: 10px;
@@ -86,21 +83,21 @@
 
 
 @media  (max-width: 955px) {
-    body{
-        min-height: 100svh;
-    }
     
     section{
         padding: 2rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100svh;
     }
 
     .leftSide{
         width: 60%;
         height: fit-content;
+    }
+
+    .leftSideTemp{
+        width: fit-content;
     }
 
     .rightSide{
@@ -152,6 +149,10 @@
         min-width: 350px;
     }
 
+    .ToDo{
+        font-size: 2em;
+    }
+
 
 }
 
@@ -162,9 +163,6 @@
 }
 
 @media (max-width: 670px){
-    body{
-        min-height: 100svh;
-    }
     
     .menudisplay h1{
         font-size: 3.2em;
@@ -192,28 +190,31 @@
             font-size: 8px;
         }
 
+        .leftSideTemp{
+            width: fit-content;
+        }
+        .ToDo{
+            width: 100%;
+            font-size: 1.5em;
+        }
+
 
 }
 
 @media (max-width: 500px){
-    body{
-        min-height: 100svh;
-    }
-
-    section{
-        min-height: 100svh;
-    }
 
     .leftSide{
-        font-size: 14px;
         min-width: 90%;
+    }
+
+    .leftSideTemp{
+        width: fit-content;
     }
 
     .rightSide{
         font-size: 7px;
         min-width: 90%;
         padding: 3em 2em;
-        min-height: 30vh;
     }
 
     label{
@@ -226,6 +227,7 @@
     .ToDo{
         font-weight: 700;
         margin-bottom: 0.7em;
+        font-size: 1.5em;
     }
 
     .createBTN{
@@ -276,17 +278,10 @@
         border-radius: 0.5em;
         border: 1px solid var(--Primary-color);
     }
+
 }
 
 @media (max-width: 450px){
-
-    body{
-        min-height: 100svh;
-    }
-
-    section{
-        height: 100%;
-    }
     
     .menudisplay h1{
         font-size: 2.8em;
@@ -296,7 +291,6 @@
         font-size: 7px;
         width: 100%;
         padding: 3em 2em;
-        min-height: 30vh;
         margin-top: 1.2em;
     }
 
@@ -344,7 +338,6 @@
     }
 
     .createDiv{
-        font-size: 17px;
         border: none;
     }
 
@@ -355,7 +348,7 @@
     .ToDo{
         font-weight: 700;
         margin-bottom: 0.2em;
-        font-size: 3em;
+        font-size: 1.4em;
     }
 
     label{
@@ -446,14 +439,6 @@
 
 
 @media (max-width: 400px){
-
-    body{
-        min-height: 100vh;
-    }
-
-    section{
-       min-height: 100svh;
-    }
     
     .menudisplay h1{
         font-size: 2.8em;
@@ -463,7 +448,6 @@
         font-size: 7px;
         width: 100%;
         padding: 3em 2em;
-        min-height: 30vh;
         margin-top: 1.2em;
     }
 
